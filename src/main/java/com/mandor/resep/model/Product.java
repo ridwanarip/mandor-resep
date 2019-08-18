@@ -27,7 +27,10 @@ public class Product {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date expired;
-		
+	
+	public Product() {
+	}
+	
 	public Product(String name, String brand, Long price, Date expired) {
 		this.name = name;
 		this.brand = brand;
