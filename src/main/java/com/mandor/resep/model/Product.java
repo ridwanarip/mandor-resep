@@ -25,7 +25,7 @@ public class Product {
 	
 	private Long price;
 	
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date expired;
 	
 	public Product() {
