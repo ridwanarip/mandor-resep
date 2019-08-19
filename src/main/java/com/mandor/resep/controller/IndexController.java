@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.mandor.resep.model.Product;
 import com.mandor.resep.service.ProductService;
 
+
 @Controller
 public class IndexController {
 
 	@Autowired
-	private ProductService productService;
+	private ProductService service;
 	
 	@RequestMapping({"", "/", "index"})
 	public String getIndexPage(Model model) {
-		List<Product> listProduct = productService.listAll();
-		model.addAttribute("listProduct", listProduct);
+		List<Product> listProducts = service.listAll();
+		model.addAttribute("listProducts", listProducts);
 		return "index";
 	}
 	
