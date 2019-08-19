@@ -21,8 +21,8 @@ public class MandorResepApplication {
 	public CommandLineRunner initProduct(ProductRepository productRepository) {
 		return (args) -> {
 			productRepository.save(new Product("baju", "distro", Long.parseLong("5000"), new Date()));
-			productRepository.save(new Product("sempak", "distro", Long.parseLong("10000"), new Date()));
+			productRepository.save(new Product("kolor", "distro", Long.parseLong("10000"), new Date()));
+			productRepository.save(new Product("tank-top", "distro", Long.parseLong("10000"), new Date()));
 		};
 	}
-
 }
