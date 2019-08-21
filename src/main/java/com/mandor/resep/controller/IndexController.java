@@ -27,7 +27,7 @@ public class IndexController {
 		return "index";
 	}
 	
-	@RequestMapping("/new")
+	@RequestMapping(value = "/new", method = RequestMethod.GET)
 	public String showNewProductPage(Model model) {
 		Product product = new Product();
 		model.addAttribute("product", product);
