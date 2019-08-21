@@ -34,7 +34,7 @@ public class IndexController {
 		return "new_product";
 	}
 	
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	public String deleteProduct(@PathVariable(name = "id") long id) {
 		service.delete(id);
 		return "redirect:/";
