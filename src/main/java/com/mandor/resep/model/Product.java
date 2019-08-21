@@ -6,8 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import lombok.Data;
 
@@ -25,7 +26,7 @@ public class Product {
 	
 	private Long price;
 	
-	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(iso = ISO.DATE)
 	private Date expired;
 	
 	public Product() {
