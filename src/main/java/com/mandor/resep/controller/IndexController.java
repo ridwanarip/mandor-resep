@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -49,7 +48,7 @@ public class IndexController {
 		return "redirect:/";
 	}
 	
-	@PostMapping("/edit/{id}")
+	@RequestMapping(value = "/edit/{id}", method = { RequestMethod.GET, RequestMethod.POST} )
 	public ModelAndView showEditProdcutEditPage(@PathVariable(name = "id") long id) {
 		ModelAndView mav = new ModelAndView("edit_product");
 		Optional<Product> product = service.getProduct(id);
